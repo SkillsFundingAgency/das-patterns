@@ -1,0 +1,117 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<div class="hgroup text">
+    <h1 class="heading-xlarge">
+        ESFA pattern library
+    </h1>
+    <ul class="list list-bullet">
+        <li>lift design patterns for your UI</li>
+        <li>provides a reference to validate your design choices</li>
+        <li>align yourself with other SFA products</li>
+    </ul>
+</div>
+    
+    
+
+    
+<div class="grid-row">
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/elements">Elements</a></h2>
+        <p>
+            All the HTML Elements that can exist according to W3C
+        </p>
+        <ul class="list list-bullet">
+            <li>scaffolding</li>
+            <li>p</li>
+            <li>div</li>
+            <li>input</li>
+        </ul>
+    <hr />
+    </div>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/index">Patterns</a></h2>
+        <p>
+            The micro interactions joiningtheexperiencetogether
+        </p>
+        <ul class="list list-bullet">
+            <li>javascript enahcements</li>
+            <li>forms</li>
+            <li>validation</li>
+            <li>notifications</li>
+        </ul>
+    <hr />
+    </div>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/pages">Pages</a></h2>
+        <p>
+            A collection of components to form a page layout
+        </p>
+        <ul class="list list-bullet">
+            <li>dashboards</li>
+            <li>search results</li>
+            <li>documents</li>
+        </ul>
+    <hr />        
+    </div>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/user-journeys/index.html">User journeys</a></h2>
+        <p>
+            Joined up pages to create a complete user journey
+        </p>
+        <ul class="list list-bullet">
+            <li>welcome wizard</li>
+            <li>search</li>
+            <li>on-boarding</li>
+        </ul>
+    <hr />        
+    </div>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="patterns/visual-language/index.html">Visual language</a></h2>
+        <p>
+            Styled content
+        </p>
+                 <ul class="list list-bullet">
+                        <li>colour</li>
+                        <li>images</li>
+                        <li>icons</li>
+                    </ul>
+        <hr />
+    </div>
+    <div class="column-half">
+        <h2 class="heading-medium"><a href="resources.html">Resources</a></h2>
+        <p>
+            Helpful resources and guidance for interaction designers.
+        </p>
+                 <ul class="list list-bullet">
+                        <li>useful links</li>
+                        <li>JavaScript snippets</li>
+                        <li>downloads</li>
+                    </ul>
+        <hr />
+    </div>
+</div>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+    <div class="panel panel-width-thin">
+        <h3 class="heading-small">Disclaimer:</h3>
+        <p>This is a living design system for prototyping. It is not designed to be production quality code nor include precise content design. Not all patterns have been fully validated through research. </p>
+    </div>    
+        </div>
+    </div>
+    
+</main>
+
+{% endblock %}
+
+

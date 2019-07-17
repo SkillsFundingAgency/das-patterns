@@ -1,0 +1,39 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+    <h1 class="heading-xlarge">
+Visual Language
+</h1>
+    <div class="text">
+        <p class="lede">
+            The visceral experience and tone of voice
+        </p>
+    </div>
+    <h2 class="heading-small heading-contents">Contents:</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+                <li><a href="/patterns/visual-language/colour">Colour</a></li>
+                <li><a href="/patterns/visual-language/images">Images</a></li>
+                <li><a href="/patterns/visual-language/icons">Icons</a></li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

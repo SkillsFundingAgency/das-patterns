@@ -1,0 +1,71 @@
+{% extends "layout_with-nav.html" %}
+
+{% block page_title %}
+  ESFA pattern library
+{% endblock %}
+
+{% block global_header_text %}
+  ESFA
+{% endblock %}
+
+{{ global_header_text|default('ESFA') }}
+
+{% block inside_header %}
+  {% include "includes/alpha-banner.html" %}
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main" tabindex="-1">
+
+    
+{% include "includes/link-back.html" %}
+    <div class="hgroup">
+        <h1 class="heading-xlarge">
+          Feedback
+        </h1>
+            <p class="text lede">
+                Allowing users to feedback their experience using the service.
+            </p>
+    </div>
+    <h2 class="heading-small heading-contents">Contents:</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <ul class="list list-contents">
+                <li><a href="./wizards.html">Smart Survey</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Welcome Wizard -->
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <div class="hgroup">
+                <h2 class="heading-large" id="welcomewizard">Smart Survey</h2>            
+                <p class="lede">The welcome wizard pattern is a linear hub and spoke pattern.</p>
+                <p>It facilitates variable requirements and the option of retrospective changes. Unlike the Check your answers pattern the Welcome Wizard present 1 thing at a time and doesn't allow the user to choose which order to complete the steps. This lends itself to instances where later steps have dependencies on the pior steps.</p>
+            </div>
+            
+        </div>
+    </div>
+    
+ 
+
+</main>
+   <div class="feedback-smartsurvey open">
+        <section>
+        <div class="grid-row">
+            <div class="column-two-thirds">
+                <details>
+                    <summary>Have an issue? Help us improve this service with your feedback.</summary>
+                </details>
+            </div>
+        </div>
+            <div class="grid-row">
+                <div class="column-half">
+                    <h1 class="heading-xlarge">Service feedback</h1>
+                </div>
+            </div>
+        </section>
+
+    </div>
+{% endblock %}

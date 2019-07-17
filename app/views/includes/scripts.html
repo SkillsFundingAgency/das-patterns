@@ -1,0 +1,71 @@
+<!-- Javascript -->
+<script src="/public/javascripts/govuk/show-hide-content.js"></script>
+<script src="/public/javascripts/application.js"></script>
+
+{% if useAutoStoreData %}
+  <script src="/public/javascripts/auto-store-data.js"></script>
+{% endif %}
+
+<!-- Add scripts -->
+
+<!-- Code blocks styles -->
+<link rel="stylesheet" href="/public/stylesheets/highlight-dark.css"/>
+<script src="/public/javascripts/highlight.pack.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/chardin.js/0.1.3/chardinjs.css" media="screen" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="screen" rel="stylesheet" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chardin.js/0.1.3/chardinjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.3/chosen.jquery.min.js"></script>       
+
+<script>
+    $("#chardinStart").click(function(e){
+        e.preventDefault(); 
+        $('body').chardinJs('start');
+    });
+    
+
+    $(document).ready(function() {
+      hljs.initHighlightingOnLoad();
+});
+    
+    
+    function progressiveMenuDisclosure() {
+    $(".header-organisation").addClass("closed").removeClass("open");
+    
+  
+        
+        var viewportWidth = $(".header-organisation").outerWidth();
+        var liSubTotalWidth = 0;
+        var liTotalWidth = 0;
+        var width = 0;
+        var moreWidth = $(".more").outerWidth();
+        var menuWidth = $(".menu").outerWidth();
+        const mq = window.matchMedia( "(min-width: 641px)" );
+
+        $(".header-inner li").each(function(){
+            width = $(this).width();
+            liSubTotalWidth = liSubTotalWidth + width;
+        });    
+        liTotalWidth = liSubTotalWidth - moreWidth - menuWidth;
+
+
+        if ( mq.matches && (viewportWidth <= liTotalWidth) ) {
+            $(".more").show();        
+        } else {
+            $(".more").hide();               
+        }    
+    
+    $(".header-organisation .more, .header-organisation .menu").click(function(e){
+        $(".header-organisation").addClass("open").removeClass("closed");
+        $(".more").hide();
+    });          
+    }
+    
+    progressiveMenuDisclosure();
+
+    
+     $("#singleSelect").chosen();
+     $("#multiSelect").chosen();
+    
+    
+</script>
